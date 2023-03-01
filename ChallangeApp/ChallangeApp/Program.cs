@@ -1,0 +1,2 @@
+﻿// Komentarz
+Console.WriteLine("Hello");
