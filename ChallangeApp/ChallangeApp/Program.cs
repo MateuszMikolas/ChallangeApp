@@ -1,21 +1,43 @@
-﻿long number = 112222233399900;
-string numberInString = number.ToString();
-char[] letters = numberInString.ToCharArray();
-int[] numberOfDigits = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-char[] digitsInChar = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+﻿using ChallangeApp;
 
-for (int a = 0; a < letters.Length; a++)
+Employee user1 = new Employee("Mariusz", "Mały", 30);
+Employee user2 = new Employee("Adam", "Średni", 40);
+Employee user3 = new Employee("Kali", "Duży", 50);
+
+for (int a = 0; a < 5; a++)
 {
-    for (int b = 0; b <= 9; b++)
+    Random b = new Random();
+    user1.AddScore(b.Next(1, 11));
+}
+
+for (int a = 0; a < 5; a++)
+{
+    Random b = new Random();
+    user2.AddScore(b.Next(1, 11));
+}
+
+for (int a = 0; a < 5; a++)
+{
+    Random b = new Random();
+    user3.AddScore(b.Next(1, 11));
+}
+
+List<Employee> listOfUsers = new List<Employee>()
+{
+    user1, user2, user3
+};
+
+var MaxResult = 0;
+Employee userWithMaxResult = null;
+
+foreach (var employee in listOfUsers)
+{
+    if (employee.ScoreSum > MaxResult)
     {
-        if (letters[a] == digitsInChar[b])
-        {
-            numberOfDigits[b]++;
-        }
+        userWithMaxResult = employee;
+        MaxResult = employee.ScoreSum;
     }
 }
 
-for (int c = 0; c < numberOfDigits.Length; c++)
-{
-        Console.WriteLine(digitsInChar[c] + " => " + numberOfDigits[c] + " szt.");
-}
+Console.WriteLine(userWithMaxResult.Name + " " + userWithMaxResult.Surname);
+Console.WriteLine("Lat " + userWithMaxResult.Age + " z wynikiem " + userWithMaxResult.ScoreSum);
