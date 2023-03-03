@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallangeApp", "ChallangeApp\ChallangeApp.csproj", "{80B48BF8-5070-4FA3-8998-50FD6D67C6AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallangeApp.Tests", "ChallangeApp.Tests\ChallangeApp.Tests.csproj", "{707928DC-C3A8-4332-8636-EA7C33D3F80B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{80B48BF8-5070-4FA3-8998-50FD6D67C6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B48BF8-5070-4FA3-8998-50FD6D67C6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B48BF8-5070-4FA3-8998-50FD6D67C6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707928DC-C3A8-4332-8636-EA7C33D3F80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707928DC-C3A8-4332-8636-EA7C33D3F80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707928DC-C3A8-4332-8636-EA7C33D3F80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707928DC-C3A8-4332-8636-EA7C33D3F80B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

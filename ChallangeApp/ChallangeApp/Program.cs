@@ -22,22 +22,3 @@ for (int a = 0; a < 5; a++)
     user3.AddScore(b.Next(1, 11));
 }
 
-List<Employee> listOfUsers = new List<Employee>()
-{
-    user1, user2, user3
-};
-
-var MaxResult = 0;
-Employee userWithMaxResult = null;
-
-foreach (var employee in listOfUsers)
-{
-    if (employee.ScoreSum > MaxResult)
-    {
-        userWithMaxResult = employee;
-        MaxResult = employee.ScoreSum;
-    }
-}
-
-Console.WriteLine(userWithMaxResult.Name + " " + userWithMaxResult.Surname);
-Console.WriteLine("Lat " + userWithMaxResult.Age + " z wynikiem " + userWithMaxResult.ScoreSum);

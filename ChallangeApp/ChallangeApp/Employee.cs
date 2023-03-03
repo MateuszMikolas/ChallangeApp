@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChallangeApp
 {
-    internal class Employee
+    public class Employee
     {
         public string Name { get; private set; }
         public string Surname { get; private set; }
@@ -29,6 +29,12 @@ namespace ChallangeApp
 
         public void AddScore(int score)
         {
+            Score.Add(score);
+        }
+
+        public void MinScore(int score)
+        {
+            score -= (score * 2);
             Score.Add(score);
         }
     }
